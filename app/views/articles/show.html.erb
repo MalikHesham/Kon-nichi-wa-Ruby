@@ -1,0 +1,19 @@
+<div class="container m-2">
+    <div class="card w-50">
+    <div class="card-body">
+        <h5 class="card-title">Post Number: <small><%= @article.id %> </small> </h5>
+        <p class="card-text"><strong>Article Title</strong>: <%= @article.title %> </p>
+        <p class="card-text"><strong>Article Content</strong>: <%= @article.text %> </p>
+        <a href=" <%= articles_path %> " class="btn btn-secondary">Go Back</a>
+
+        <h2>Comments</h2>
+        <%= render @article.comments %>
+        
+        <h2>Add a comment:</h2>
+        <%= render 'comments/form' %>
+        
+        <%= link_to 'Edit', edit_article_path(@article) %> |
+        <%= link_to 'Back', articles_path %>
+    </div>
+    </div>
+</div>
