@@ -4,6 +4,10 @@
         <h5 class="card-title">Post Number: <small><%= @article.id %> </small> </h5>
         <p class="card-text"><strong>Article Title</strong>: <%= @article.title %> </p>
         <p class="card-text"><strong>Article Content</strong>: <%= @article.text %> </p>
+        <p>
+            <strong>Created By:</strong>
+            <%= @article.user != nil ? @article.user.email : " " %>
+        </p>
         <a href=" <%= articles_path %> " class="btn btn-secondary">Go Back</a>
 
         <h2>Comments</h2>
