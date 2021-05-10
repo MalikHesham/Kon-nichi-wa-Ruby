@@ -60,3 +60,9 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Auth library
 gem 'devise'
+
+# for api
+gem 'active_model_serializers', '~> 0.8.0'
+
+# JWT authentication
+gem 'jwt'

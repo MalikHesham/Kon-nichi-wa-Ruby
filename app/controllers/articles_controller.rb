@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: %i[index show new create edit update destroy]
   def new
     @article = Article.new
   end
@@ -40,6 +40,11 @@ class ArticlesController < ApplicationController
     @article.destroy
 
     redirect_to articles_path
+  end
+
+  def api_show
+    @article = Article.find(params[:id])
+    render json: @article
   end
 
   private
