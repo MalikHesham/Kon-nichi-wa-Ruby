@@ -21,6 +21,8 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
+    
+      <% if can? :manage, article %>
       <td>
         <a href=" <%= article_path(article) %> " class="btn btn-success">Details</a>
         <a href=" <%= edit_article_path(article)%> " class="btn btn-warning">Edit</a>
@@ -52,6 +54,7 @@
           </div>
         </div>              
       </td>
+      <% end %>
     </tr>
     <% end %>
   </tbody>

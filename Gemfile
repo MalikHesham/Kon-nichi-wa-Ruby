@@ -66,3 +66,6 @@ gem 'active_model_serializers', '~> 0.8.0'
 
 # JWT authentication
 gem 'jwt'
+
+# cancancan
+gem 'cancancan'
