@@ -8,23 +8,23 @@
 #       @real = real
 #       @img = img
 #     end
-  
+
 #     def +(cmplxNum)
 #       @@addition_counter += 1
 #       ComplexNumber.new(real + cmplxNum.real, img + cmplxNum.img)
 #     end
-  
+
 #     def -(cmplxNum)
 #       ComplexNumber.new(real - cmplxNum.real, img - cmplxNum.img)
 #     end
-  
+
 #     def *(cmplxNum)
 #       @@mulitplication_counter += 1
 #       new_real = real * cmplxNum.real - img * cmplxNum.img
 #       new_img = img * cmplxNum.real + real * cmplxNum.img
 #       ComplexNumber.new(new_real, new_img)
 #     end
-  
+
 #     def self.bulk_add(cmplxArr)
 #         answer = cmplxArr.first
 #         cmplxArr.drop(1).each do |cmplxNum|
@@ -32,7 +32,7 @@
 #         end
 #         answer
 #     end
-    
+
 #     def self.bulk_multiply(cmplxArr)
 #         answer = cmplxArr.first
 #         cmplxArr.drop(1).each do |cmplxNum|
@@ -40,7 +40,7 @@
 #         end
 #         answer
 #     end
-    
+
 #     def to_s
 #         "#{self.real} + #{self.img}i"
 #     end
@@ -69,9 +69,9 @@
 # ComplexNumber.get_stats()
 
 x = 5
-unless x < 8
-  x += 3
-else 
-    x += 2
-end
+x += if x < 8
+       2
+     else
+       3
+     end
 puts x
